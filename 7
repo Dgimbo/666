@@ -1,24 +1,25 @@
 #include <stdio.h>
 #include <stdlib.h>
-int input()
-{
-printf("How numbers to display?\n");
-}
+int n;
 int Fib(int i)
 {
-if(i < 1) return 0;
-if(i == 1) return 1;
-return Fib(i-1) + Fib(i - 2);
+  if(i < 1) return 0;
+  if(i == 1) return 1;
+  return Fib(i-1) + Fib(i - 2);
+}
+int input()
+{
+  printf("How numbers to display?\n");
+  scanf("%d",&n);
+  return n;
 }
 int main()
 {
-int i;
-int n;
-input();
-scanf("%d",&n);
-for (i=1; i<=n; i++)
+  int i;
+  input();
+  for (i=1; i<=n; i++)
 {
-printf ("%d ", Fib(i));
+  printf ("%d ", Fib(i)); 
 }
 return 0;
 }
